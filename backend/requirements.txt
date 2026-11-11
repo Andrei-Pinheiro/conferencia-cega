@@ -7,3 +7,8 @@ pydantic-settings
 
 pwdlib[argon2]
 PyJWT
+
+defusedxml
+pytest
+
+python-multipart

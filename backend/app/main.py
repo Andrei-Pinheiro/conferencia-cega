@@ -1,13 +1,15 @@
 ﻿from fastapi import FastAPI
 from sqlalchemy import text
 
-from app.api import auth, filiais, usuarios
+from app.api import auth, conferencias, filiais, notas, usuarios
 from app.core.database import engine
 
 app = FastAPI(title="Conferência Cega de NF")
 app.include_router(auth.router)
 app.include_router(filiais.router)
 app.include_router(usuarios.router)
+app.include_router(notas.router)
+app.include_router(conferencias.router)
 
 
 @app.get("/saude")
